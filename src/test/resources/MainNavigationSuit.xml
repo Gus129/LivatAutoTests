@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Full Test">
+<!--    <listeners>-->
+<!--        <listener class-name="tests.base.CustomListener"></listener>-->
+<!--    </listeners>-->
+    <test verbose="2" preserve-order="true" name="All cases">
+        <classes>
+
+            <class name="cases.MainNavigation.HeaderAndNavigationBarTest">
+            </class>
+            <class name="cases.MainNavigation.MenuTest">
+            </class>
+            <class name="cases.ContuctUsTest">
+            </class>
+            <class name="cases.HomePageFeedTest">
+            </class>
+            <class name="cases.MainBannerTest">
+            </class>
+            <class name="cases.OpeningHoursTest">
+            </class>
+            <class name="cases.ShopDetailPageTest">
+            </class>
+            <class name="cases.ShopListingPageTest">
+            </class>
+            <class name="cases.TenantsListingPageTest">
+            </class>
+
+        </classes>
+    </test>
+</suite>
