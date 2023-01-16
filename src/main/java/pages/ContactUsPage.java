@@ -6,13 +6,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import java.util.List;
+
 import static org.testng.AssertJUnit.fail;
 
 
 public class ContactUsPage extends BasePage{
 
 
-    ///Избавится от общего шаблона - все равно он не такой уж и универсальный
+
 
     public ContactUsPage(WebDriver driver) {
         super(driver);
@@ -44,6 +46,12 @@ public class ContactUsPage extends BasePage{
         return driver.findElement(By.xpath("//*[@data-sc-field-name='Message']"));
     }
 
+    public WebElement TermsOfUseCheckBox() {return driver.findElement(By.xpath("//*[@data-sc-field-name='Rich text checkbox']"));}
+
+    public WebElement SubmitButton(){return driver.findElement(By.xpath("//*[@type='submit']"));}
+
+//    public WebElement SuccessMessage(){return driver.findElement(By.xpath("//*[@class='c-card c-card--text ']"));}
+
     public void verifyTitle(String pageTitle){
         Assert.assertEquals(pageTitle, driver.getTitle());
     }
@@ -52,7 +60,21 @@ public class ContactUsPage extends BasePage{
         Assert.assertTrue(fieldName.isDisplayed());
         System.out.println("Field '"+fieldName.getAccessibleName()+"' verified – Assert passed");
     }
+    public void verifySubmitButtonInactive(){
+        Assert.assertFalse(SubmitButton().isDisplayed(), "Button 'Submit' expected to be inactive");
+    }
+    public void verifySubmitButtonActive(){
+        Assert.assertTrue(SubmitButton().isDisplayed(), "Button 'Submit' expected to be active");
+    }
 
+    public void verifyTermsOfUseIsDisplayed(){
+        Assert.assertTrue(TermsOfUseCheckBox().isDisplayed(), "Checkbox 'I have read and understood the terms...' is not displayed");
+    }
+    public void verifySuccessMessageIsDisplayed(){
+        String text = "We have received your message and thank you for writing to us. We will get back to you within shortly.";
+        List<WebElement> list = driver.findElements(By.xpath("//*[contains(text(),'" + text + "')]"));
+        Assert.assertTrue(list.size() > 0, "Text '" + text + "' not found!");
+    }
 
 
     public void verifyInputMaxLength(WebElement inputElement,int maxLengthInput){
@@ -69,7 +91,7 @@ public class ContactUsPage extends BasePage{
         }
 
         else {
-            fail("Fail -  "+maxLengthInput+ " expected, actual - "+maxLengthDefined+"");
+            fail("Fail -  for field '"+inputElement.getAccessibleName() +"' "+maxLengthInput+ " maxlength expected, actual - "+maxLengthDefined+"");
         }
 
 
