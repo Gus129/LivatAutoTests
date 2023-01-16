@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Contact Us page Test Suite">
+    <test verbose="2" preserve-order="true" name="Contact Us page Test">
+        <classes>
+            <class name="cases.ContactUsTest"></class>
+        </classes>
+    </test>
+</suite>

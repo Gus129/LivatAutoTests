@@ -1,8 +1,7 @@
 package base;
 
 import common.CommonAction;
-import pages.BasePage;
-import pages.LivatHomePage;
+import pages.ContactUsPage;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -15,8 +14,8 @@ import java.util.Date;
 
 public class BaseTest {
     protected WebDriver driver = CommonAction.createDriver();
-    protected BasePage basePage = new BasePage(driver);
-    protected LivatHomePage livatHomePage = new LivatHomePage(driver);
+    protected ContactUsPage ContactUsPage = new ContactUsPage(driver);
+
 
     public void FailureScreenshot (String methodName){
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
