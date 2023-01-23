@@ -1,11 +1,13 @@
 package base;
 
 import common.CommonAction;
+import pages.BasePage;
 import pages.ContactUsPage;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.testng.annotations.AfterSuite;
+import pages.OpeningHoursPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +16,9 @@ import java.util.Date;
 
 public class BaseTest {
     protected WebDriver driver = CommonAction.createDriver();
+    protected BasePage basePage = new BasePage(driver);
     protected ContactUsPage ContactUsPage = new ContactUsPage(driver);
+    protected OpeningHoursPage OpeningHoursPage = new OpeningHoursPage(driver);
 
 
     public void FailureScreenshot (String methodName){

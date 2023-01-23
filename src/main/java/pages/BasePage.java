@@ -35,6 +35,10 @@ public class BasePage {
         driver.get(url);
     }
 
+    public void verifyTitle(String pageTitle){
+        Assert.assertEquals(pageTitle, driver.getTitle());
+    }
+
     public void assertPageLoaded(String url){
         driver.get(url);
         // Javascript executor to return value

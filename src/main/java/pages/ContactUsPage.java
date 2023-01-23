@@ -50,26 +50,35 @@ public class ContactUsPage extends BasePage{
 
     public WebElement SubmitButton(){return driver.findElement(By.xpath("//*[@type='submit']"));}
 
-//    public WebElement SuccessMessage(){return driver.findElement(By.xpath("//*[@class='c-card c-card--text ']"));}
 
-    public void verifyTitle(String pageTitle){
-        Assert.assertEquals(pageTitle, driver.getTitle());
-    }
+
+
 
     public void verifyField (WebElement fieldName){
         Assert.assertTrue(fieldName.isDisplayed());
         System.out.println("Field '"+fieldName.getAccessibleName()+"' verified – Assert passed");
     }
+
+    // public void verifyField_isMandatory (WebElement fieldName){ - пока не нужно, но если делать то отдельно для каждого филда
+
+
+
     public void verifySubmitButtonInactive(){
         Assert.assertFalse(SubmitButton().isDisplayed(), "Button 'Submit' expected to be inactive");
     }
+
+
     public void verifySubmitButtonActive(){
         Assert.assertTrue(SubmitButton().isDisplayed(), "Button 'Submit' expected to be active");
     }
 
+
+
     public void verifyTermsOfUseIsDisplayed(){
         Assert.assertTrue(TermsOfUseCheckBox().isDisplayed(), "Checkbox 'I have read and understood the terms...' is not displayed");
     }
+
+
     public void verifySuccessMessageIsDisplayed(){
         String text = "We have received your message and thank you for writing to us. We will get back to you within shortly.";
         List<WebElement> list = driver.findElements(By.xpath("//*[contains(text(),'" + text + "')]"));
