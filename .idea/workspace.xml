@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a665ea78-23c1-4c4e-bf09-3111e1832d6b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ContactUsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cases/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cases/ContactUsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cases/OpeningHoursTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cases/OpeningHoursTest.java" afterDir="false" />
     </list>
@@ -67,7 +67,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactUsTest">
+  <component name="RunManager" selected="TestNG.OpeningHoursTest">
     <configuration name="C:/Users/Vladimir/IdeaProjects/LivatAutoTests/src/test/resources/ContactUsPageTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="LivatAutoTests" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/ContactUsPageTestSuite.xml" />
@@ -114,8 +114,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ContactUsTest" />
         <item itemvalue="TestNG.OpeningHoursTest" />
+        <item itemvalue="TestNG.ContactUsTest" />
         <item itemvalue="TestNG.C:/Users/Vladimir/IdeaProjects/LivatAutoTests/src/test/resources/ContactUsPageTestSuite.xml" />
       </list>
     </recent_temporary>

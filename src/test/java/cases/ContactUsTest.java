@@ -27,7 +27,7 @@ public class ContactUsTest extends BaseTest {
         basePage.open(ContactUsUrl);
         basePage.waitElementIsVisible(ContactUsPage.NameInput());
 
-        ContactUsPage.verifyField(ContactUsPage.NameInput());
+        basePage.verifyField(ContactUsPage.NameInput());
     }
 
     @Test
@@ -35,7 +35,7 @@ public class ContactUsTest extends BaseTest {
         basePage.open(ContactUsUrl);
         basePage.waitElementIsVisible(ContactUsPage.EmailInput());
 
-        ContactUsPage.verifyField(ContactUsPage.EmailInput());
+        basePage.verifyField(ContactUsPage.EmailInput());
     }
 
     @Test
@@ -43,7 +43,7 @@ public class ContactUsTest extends BaseTest {
         basePage.open(ContactUsUrl);
         basePage.waitElementIsVisible(ContactUsPage.ConfirmEmailInput());
 
-        ContactUsPage.verifyField(ContactUsPage.ConfirmEmailInput());
+        basePage.verifyField(ContactUsPage.ConfirmEmailInput());
     }
 
     @Test
@@ -59,7 +59,7 @@ public class ContactUsTest extends BaseTest {
         basePage.open(ContactUsUrl);
         basePage.waitElementIsVisible(ContactUsPage.MessageInput());
 
-        ContactUsPage.verifyField(ContactUsPage.MessageInput());
+        basePage.verifyField(ContactUsPage.MessageInput());
     }
     //verification for all text input fields on Contact Us Page
 

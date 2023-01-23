@@ -24,4 +24,68 @@ public class OpeningHoursTest extends BaseTest {
         basePage.assertPageLoaded(OpeningHoursUrl);
         basePage.verifyTitle(OpeningHoursTitle);
     }
+
+    @Test
+
+    public void verify_FindShopInput(){
+
+        basePage.open(OpeningHoursUrl);
+        basePage.assertPageLoaded(OpeningHoursUrl);
+
+        basePage.waitElementIsVisible(OpeningHoursPage.FindShopInput());
+        basePage.verifyField(OpeningHoursPage.FindShopInput());
+
+        OpeningHoursPage.verifyFindShopOutline_whenNOTClicked();
+
+        OpeningHoursPage.FindShopInput().click();
+
+        OpeningHoursPage.verifyFindShopOutline_whenClicked();
+
+        OpeningHoursPage.verifyFindShop_whenTypedSomething("kekw");
+
+
+
+    }
+
+    @Test
+
+    public void verify_FindShopAutoComplete(){
+        basePage.open(OpeningHoursUrl);
+        basePage.assertPageLoaded(OpeningHoursUrl);
+
+        basePage.waitElementIsVisible(OpeningHoursPage.FindShopInput());
+        basePage.verifyField(OpeningHoursPage.FindShopInput());
+
+
+        OpeningHoursPage.FindShopInput().sendKeys("ea");
+        OpeningHoursPage.verifyFindShopFilter_working();
+    }
+
+    @Test
+
+    public void verify_FindShop_whenIKEA(){
+        basePage.open(OpeningHoursUrl);
+        basePage.assertPageLoaded(OpeningHoursUrl);
+
+        basePage.waitElementIsVisible(OpeningHoursPage.FindShopInput());
+        basePage.verifyField(OpeningHoursPage.FindShopInput());
+
+
+        OpeningHoursPage.FindShopInput().sendKeys("IKEA");
+        OpeningHoursPage.verifyFindShopFilter_working();
+        ////Доделать клик на "ИКЕА" - нельзя проинспектить и выделить элемент - соотв. и кликнуть потом на него тоже
+        OpeningHoursPage.verifyIKEAinfo_IsDisplayed();
+        OpeningHoursPage.QuickSearchResultLink().click();
+
+        basePage.assertPageLoaded(IKEAshopUrl);
+        driver.navigate().back();
+        basePage.assertPageLoaded(OpeningHoursUrl);
+
+        OpeningHoursPage.verifyFindShop_isEmpty();
+
+
+
+    }
+
+
 }

@@ -54,12 +54,7 @@ public class ContactUsPage extends BasePage{
 
 
 
-    public void verifyField (WebElement fieldName){
-        Assert.assertTrue(fieldName.isDisplayed());
-        System.out.println("Field '"+fieldName.getAccessibleName()+"' verified – Assert passed");
-    }
 
-    // public void verifyField_isMandatory (WebElement fieldName){ - пока не нужно, но если делать то отдельно для каждого филда
 
 
 
@@ -95,8 +90,9 @@ public class ContactUsPage extends BasePage{
         }
 
         else if (maxLengthDefined.equals(Integer.toString(maxLengthInput))) {
-            Assert.assertTrue(true);
+//            Assert.assertTrue(true);
             System.out.println("Max character limit for field '"+inputElement.getAccessibleName() +"' is set as expected = '" + maxLengthInput + "'");
+
         }
 
         else {
