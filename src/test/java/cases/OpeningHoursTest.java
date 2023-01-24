@@ -70,14 +70,15 @@ public class OpeningHoursTest extends BaseTest {
         basePage.waitElementIsVisible(OpeningHoursPage.FindShopInput());
         basePage.verifyField(OpeningHoursPage.FindShopInput());
 
-
-        OpeningHoursPage.FindShopInput().sendKeys("IKEA");
+        OpeningHoursPage.verifyFindShop_whenIKEA();
         OpeningHoursPage.verifyFindShopFilter_working();
-        ////Доделать клик на "ИКЕА" - нельзя проинспектить и выделить элемент - соотв. и кликнуть потом на него тоже
-        OpeningHoursPage.verifyIKEAinfo_IsDisplayed();
+
         OpeningHoursPage.QuickSearchResultLink().click();
+        OpeningHoursPage.verifyIKEAinfo_IsDisplayed();
+
 
         basePage.assertPageLoaded(IKEAshopUrl);
+        OpeningHoursPage.verifyIKEAPage_IsDisplayed();
         driver.navigate().back();
         basePage.assertPageLoaded(OpeningHoursUrl);
 

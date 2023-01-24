@@ -25,7 +25,7 @@ public class OpeningHoursPage extends BasePage{
     }
     public WebElement FindShopAutoOptions(){ return driver.findElement(By.id("stores-list"));}
     public List<WebElement>optionsToSelect() {return FindShopAutoOptions().findElements(By.tagName("option"));}
-    public WebElement QuickSearchResultHeading(){ return driver.findElement(By.id("opening-hour-quick-search--results-heading"));}
+
     public WebElement QuickSearchResultLink(){ return driver.findElement(By.id("opening-hour-quick-search--result-link"));}
 
     public void verifyFindShop_isEmpty(){
@@ -60,7 +60,7 @@ public class OpeningHoursPage extends BasePage{
 
     }
 
-    public void verifyFindShopFilter_working(){
+    public void verifyFindShopFilter_working(){   //вызывать при пустом поле или любом вводе в FindShop, для проверки работы фильтра //возможно стоит переписать чтобы работало самостоятельно
         String textInput = FindShopInput().getAttribute("value");;
         List<String> optionsVerify = new ArrayList<>();
             for(WebElement option : optionsToSelect()) {
@@ -85,13 +85,23 @@ public class OpeningHoursPage extends BasePage{
 
     }
 
-    public void verifyIKEAinfo_IsDisplayed(){
+    public void verifyFindShop_whenIKEA(){
+        FindShopInput().sendKeys("IKEA");
+        FindShopInput().sendKeys(Keys.DOWN, Keys.RETURN);
+    }
 
-        Assert.assertEquals(QuickSearchResultHeading().getAttribute("innerText"), "IKEA", "Fail: wrong header in results of quick search");
+    public void verifyIKEAinfo_IsDisplayed(){
+        WebElement QuickSearchResultHeading = driver.findElement(By.id("opening-hour-quick-search--results-heading"));
+        Assert.assertEquals(QuickSearchResultHeading.getAttribute("textContent"), "IKEA", "Fail: wrong header in results of quick search");
         Assert.assertEquals(QuickSearchResultLink().getAttribute("href"), "https://www.livat.com/en/hammersmith/shops/ikea", "Fail: wrong link in results of quick search ");
+
+    }
+
+    public void verifyIKEAPage_IsDisplayed(){
         String text = "IKEA Hammersmith offers a wide range of simple, well-designed and affordable home furnishings";
         List<WebElement> list = driver.findElements(By.xpath("//*[contains(text(),'" + text + "')]"));
         Assert.assertTrue(list.size() > 0, "Text '" + text + "' not found!");
+
     }
 
 
