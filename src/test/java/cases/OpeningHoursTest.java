@@ -73,8 +73,9 @@ public class OpeningHoursTest extends BaseTest {
         OpeningHoursPage.verifyFindShop_whenIKEA();
         OpeningHoursPage.verifyFindShopFilter_working();
 
-        OpeningHoursPage.QuickSearchResultLink().click();
         OpeningHoursPage.verifyIKEAinfo_IsDisplayed();
+        OpeningHoursPage.QuickSearchResultLink().click();
+
 
 
         basePage.assertPageLoaded(IKEAshopUrl);
