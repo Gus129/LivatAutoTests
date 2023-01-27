@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a665ea78-23c1-4c4e-bf09-3111e1832d6b" name="Changes" comment="">
+    <list default="true" id="a665ea78-23c1-4c4e-bf09-3111e1832d6b" name="Changes" comment="Fix for HomePageTest, LivatMenuButton().click not working properly">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ContactUsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cases/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cases/ContactUsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cases/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cases/HomePageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cases/MainNavigation/HeaderAndNavigationBarTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cases/OpeningHoursTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cases/OpeningHoursTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +70,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.OpeningHoursTest">
+  <component name="RunManager" selected="TestNG.HomePageTest">
     <configuration name="C:/Users/Vladimir/IdeaProjects/LivatAutoTests/src/test/resources/ContactUsPageTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="LivatAutoTests" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/ContactUsPageTestSuite.xml" />
@@ -90,6 +98,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HomePageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="LivatAutoTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cases" />
+      <option name="MAIN_CLASS_NAME" value="cases.HomePageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OpeningHoursTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="LivatAutoTests" />
       <extension name="coverage">
@@ -109,6 +134,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.HomePageTest" />
         <item itemvalue="TestNG.OpeningHoursTest" />
         <item itemvalue="TestNG.ContactUsTest" />
         <item itemvalue="TestNG.C:/Users/Vladimir/IdeaProjects/LivatAutoTests/src/test/resources/ContactUsPageTestSuite.xml" />
@@ -159,7 +185,35 @@
       <option name="project" value="LOCAL" />
       <updated>1674566312365</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix for testcase order in verify_FindShop_whenIKEA">
+      <created>1674644267912</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674644267912</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fix for BasePage.assertPageLoaded, HomePageTest finishing">
+      <created>1674835926029</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674835926029</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix for HomePageTest, LivatMenuButton().click not working properly">
+      <created>1674836468078</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674836468078</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix for HomePageTest, LivatMenuButton().click not working properly">
+      <created>1674836598024</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674836598024</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,6 +246,134 @@
     <MESSAGE value="Additional Tests for Contact Us Page, naming and structure" />
     <MESSAGE value="Full tests for OpeningHoursPage" />
     <MESSAGE value="Fixed autocomplete for FindShop_whenIKEA test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed autocomplete for FindShop_whenIKEA test" />
+    <MESSAGE value="Fix for testcase order in verify_FindShop_whenIKEA" />
+    <MESSAGE value="Fix for BasePage.assertPageLoaded, HomePageTest finishing" />
+    <MESSAGE value="Fix for HomePageTest, LivatMenuButton().click not working properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix for HomePageTest, LivatMenuButton().click not working properly" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>36</line>
+          <properties class="pages.OpeningHoursPage">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/cases/HomePageTest.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/cases/HomePageTest.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/cases/HomePageTest.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/cases/HomePageTest.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/cases/HomePageTest.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

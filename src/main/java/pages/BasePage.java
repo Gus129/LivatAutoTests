@@ -1,14 +1,13 @@
 package pages;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 
-import java.time.Clock;
 import java.time.Duration;
 
 import static common.Config.EXPLICIT_WAIT;
@@ -50,13 +49,13 @@ public class BasePage {
 
     public void verifyField (WebElement fieldName){
         Assert.assertTrue(fieldName.isDisplayed());
-        System.out.println("Field '"+fieldName.getAccessibleName()+"' verified – Assert passed");
+        System.out.println("Field '"+fieldName.getAttribute("name")+"' verified – Assert passed");
     }
 
     // public void verifyField_isMandatory (WebElement fieldName){ - пока не нужно, но если делать то отдельно для каждого филда
 
     public void assertPageLoaded(String url){
-        driver.get(url);
+
         // Javascript executor to return value
         JavascriptExecutor j = (JavascriptExecutor) driver;
         j.executeScript("return document.readyState")
@@ -69,8 +68,58 @@ public class BasePage {
             System.out.println("Current Url: " + s);
         }
         else {
-            System.out.println("Page did not load");
+            fail("Page did not load");
         }
+    }
+
+    public void scrollToBottom (){
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+    }
+
+    public void scrollToTop (){
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0)");
+    }
+
+    public void scrollToElement (WebElement element){
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].scrollIntoView();", element);
+    }
+
+    public  Boolean isVisibleInViewport(WebElement element) {
+        WebDriver driver = ((RemoteWebElement)element).getWrappedDriver();
+
+        return (Boolean)((JavascriptExecutor)driver).executeScript(
+                "var elem = arguments[0],                 " +
+                        "  box = elem.getBoundingClientRect(),    " +
+                        "  cx = box.left + box.width / 2,         " +
+                        "  cy = box.top + box.height / 2,         " +
+                        "  e = document.elementFromPoint(cx, cy); " +
+                        "for (; e; e = e.parentElement) {         " +
+                        "  if (e === elem)                        " +
+                        "    return true;                         " +
+                        "}                                        " +
+                        "return false;                            "
+                , element);
+    }
+
+
+
+    public void assertWebElement_isNOTVisibleInViewport(WebElement element){
+        Assert.assertFalse(isVisibleInViewport(element),"Fail: WebElement - "+element.getAttribute("textContent")+" is visible");
+    }
+
+    public void assertWebElement_isVisibleInViewport(WebElement element){
+        Assert.assertTrue(isVisibleInViewport(element),"Fail: WebElement - "+element.getAttribute("textContent")+" is not visible");
+    }
+
+    public void MouseClick(WebElement element){
+        Actions action = new Actions(driver);
+        action.moveToElement(element).click(element).build().perform();
+    }
+
+    public void clickOutside() {
+        Actions action = new Actions(driver);
+        action.moveByOffset(0, 0).click().build().perform();
     }
 
 

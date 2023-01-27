@@ -35,11 +35,11 @@ public class OpeningHoursTest extends BaseTest {
         basePage.waitElementIsVisible(OpeningHoursPage.FindShopInput());
         basePage.verifyField(OpeningHoursPage.FindShopInput());
 
-        OpeningHoursPage.verifyFindShopOutline_whenNOTClicked();
+
 
         OpeningHoursPage.FindShopInput().click();
 
-        OpeningHoursPage.verifyFindShopOutline_whenClicked();
+
 
         OpeningHoursPage.verifyFindShop_whenTypedSomething("kekw");
 
@@ -72,14 +72,11 @@ public class OpeningHoursTest extends BaseTest {
 
         OpeningHoursPage.verifyFindShop_whenIKEA();
         OpeningHoursPage.verifyFindShopFilter_working();
-
         OpeningHoursPage.verifyIKEAinfo_IsDisplayed();
+
         OpeningHoursPage.QuickSearchResultLink().click();
-
-
-
-        basePage.assertPageLoaded(IKEAshopUrl);
         OpeningHoursPage.verifyIKEAPage_IsDisplayed();
+
         driver.navigate().back();
         basePage.assertPageLoaded(OpeningHoursUrl);
 

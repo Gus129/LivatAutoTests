@@ -7,6 +7,7 @@ import pages.ContactUsPage;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.testng.annotations.AfterSuite;
+import pages.HomePage;
 import pages.OpeningHoursPage;
 
 import java.io.File;
@@ -15,10 +16,12 @@ import java.util.Date;
 
 
 public class BaseTest {
+
     protected WebDriver driver = CommonAction.createDriver();
     protected BasePage basePage = new BasePage(driver);
     protected ContactUsPage ContactUsPage = new ContactUsPage(driver);
     protected OpeningHoursPage OpeningHoursPage = new OpeningHoursPage(driver);
+    protected HomePage HomePage = new HomePage(driver);
 
 
     public void FailureScreenshot (String methodName){

@@ -20,51 +20,39 @@ public class ContactUsPage extends BasePage{
         super(driver);
     }
 
-    public static final String ContactUsUrl = "https://www.livat.com/en/hammersmith/contact-us";
-    public static final String ContactUsTitle = "Contact us | Livat";
-//    public static final String ContactUsNameField = "Name";
-//    public static final String ContactUsEmailField = "Email Confirmation";
-//    public static final String ContactUsEmailConfirmationField = "Email Confirmation";
-
-    public WebElement NameInput(){
-        return driver.findElement(By.xpath("//*[@data-sc-field-name='Name']"));
-    }
-
-    public WebElement EmailInput(){
-        return driver.findElement(By.xpath("//*[@data-sc-field-name='Email Confirmation'][1]"));
-    }
-
-    public WebElement ConfirmEmailInput(){
-        return driver.findElement(By.xpath("//*[@data-sc-field-name='Email Confirmation'][2]"));
-    }
-
-    public WebElement PhoneNumberInput(){
-        return driver.findElement(By.xpath("//*[@data-sc-field-name='Telephone']"));
-    }
+    public static final String ContactUsUrl = "https://www.livat.com/hammersmith/en/contact-us";
+    public static final String ContactUsTitle = "Contact us | Livat - Make Today Different";
 
     public WebElement MessageInput(){
-        return driver.findElement(By.xpath("//*[@data-sc-field-name='Message']"));
+        return driver.findElement(By.xpath("//*[@id='message']"));
     }
-
-    public WebElement TermsOfUseCheckBox() {return driver.findElement(By.xpath("//*[@data-sc-field-name='Rich text checkbox']"));}
-
+    public WebElement TermsOfUseCheckBox() {return driver.findElement(By.xpath("//*[@id='gatsby-focus-wrapper']/div/main/div/div[2]/div[2]/div/form/div[6]/label/span[2]"));}
     public WebElement SubmitButton(){return driver.findElement(By.xpath("//*[@type='submit']"));}
 
 
+    public WebElement NameInput(){
+        return driver.findElement(By.xpath("//*[@id='name']"));
+    }
 
+    public WebElement EmailInput(){
+        return driver.findElement(By.xpath("//*[@id='email']"));
+    }
 
+    public WebElement ConfirmEmailInput(){
+        return driver.findElement(By.xpath("//*[@id='validateEmail']"));
+    }
 
-
-
-
+    public WebElement PhoneNumberInput(){
+        return driver.findElement(By.xpath("//*[@id='phoneNumber']"));
+    }
 
     public void verifySubmitButtonInactive(){
-        Assert.assertFalse(SubmitButton().isDisplayed(), "Button 'Submit' expected to be inactive");
+        Assert.assertFalse(SubmitButton().isEnabled(), "Button 'Submit' expected to be inactive");
     }
 
 
     public void verifySubmitButtonActive(){
-        Assert.assertTrue(SubmitButton().isDisplayed(), "Button 'Submit' expected to be active");
+        Assert.assertTrue(SubmitButton().isEnabled(), "Button 'Submit' expected to be active");
     }
 
 
@@ -75,7 +63,7 @@ public class ContactUsPage extends BasePage{
 
 
     public void verifySuccessMessageIsDisplayed(){
-        String text = "We have received your message and thank you for writing to us. We will get back to you within shortly.";
+        String text = "Thank you!";//"We have received your message. Thank you for writing to us and we will get back to you within shortly.";
         List<WebElement> list = driver.findElements(By.xpath("//*[contains(text(),'" + text + "')]"));
         Assert.assertTrue(list.size() > 0, "Text '" + text + "' not found!");
     }

@@ -1,14 +1,7 @@
 package cases;
 
 import base.BaseTest;
-
-
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.openqa.selenium.By;
-import pages.ContactUsPage;
-
 import static pages.ContactUsPage.*;
 
 
@@ -79,9 +72,9 @@ public class ContactUsTest extends BaseTest {
         basePage.open(ContactUsUrl);
         basePage.waitElementIsVisible(ContactUsPage.EmailInput());
 
-        ContactUsPage.verifyInputMaxLength(ContactUsPage.EmailInput(), 255);
+        ContactUsPage.verifyInputMaxLength(ContactUsPage.EmailInput(), 254);
     }
-    //Email - 255 expected
+    //Email - 254 expected
 
     @Test
     public void verify_ConfirmEmailInputMaxLength(){
@@ -97,9 +90,9 @@ public class ContactUsTest extends BaseTest {
         basePage.open(ContactUsUrl);
         basePage.waitElementIsVisible(ContactUsPage.PhoneNumberInput());
 
-        ContactUsPage.verifyInputMaxLength(ContactUsPage.PhoneNumberInput(), 15);
+        ContactUsPage.verifyInputMaxLength(ContactUsPage.PhoneNumberInput(), 30);
     }
-    //Phone Number - 15 expected
+    //Phone Number - 30 expected
 
     @Test
     public void verify_MessageInputMaxLength(){

@@ -70,8 +70,9 @@ public class HomePageTest extends BaseTest{
 
         HomePage.LivatMenuOpeningHoursButton().click();
 
-        basePage.assertPageLoaded(OpeningHoursUrl);
+
         basePage.verifyTitle(OpeningHoursTitle);
+        basePage.assertPageLoaded(OpeningHoursUrl);
     }
 
     @Test
