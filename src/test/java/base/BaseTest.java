@@ -1,14 +1,11 @@
 package base;
 
 import common.CommonAction;
-import pages.BasePage;
-import pages.ContactUsPage;
+import pages.*;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.testng.annotations.AfterSuite;
-import pages.HomePage;
-import pages.OpeningHoursPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,6 +19,7 @@ public class BaseTest {
     protected ContactUsPage ContactUsPage = new ContactUsPage(driver);
     protected OpeningHoursPage OpeningHoursPage = new OpeningHoursPage(driver);
     protected HomePage HomePage = new HomePage(driver);
+    protected ShopListingPage ShopListingPage = new ShopListingPage(driver);
 
 
     public void FailureScreenshot (String methodName){

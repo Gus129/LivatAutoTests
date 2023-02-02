@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a665ea78-23c1-4c4e-bf09-3111e1832d6b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/ShopListingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cases/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cases/ContactUsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cases/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cases/HomePageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cases/ShopDetailPageTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cases/ShopListingPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cases/ShopListingPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cases/TenantsListingPageTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,34 +66,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.HomePageTest">
-    <configuration name="C:/Users/Vladimir/IdeaProjects/LivatAutoTests/src/test/resources/ContactUsPageTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="LivatAutoTests" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/ContactUsPageTestSuite.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactUsTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="LivatAutoTests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cases" />
-      <option name="MAIN_CLASS_NAME" value="cases.ContactUsTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.ShopListingPageTest">
     <configuration name="HomePageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="LivatAutoTests" />
       <extension name="coverage">
@@ -147,13 +119,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShopListingPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="LivatAutoTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cases" />
+      <option name="MAIN_CLASS_NAME" value="cases.ShopListingPageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopListingPageTest.verify_ShopListingAutoComplete" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="LivatAutoTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cases" />
+      <option name="MAIN_CLASS_NAME" value="cases.ShopListingPageTest" />
+      <option name="METHOD_NAME" value="verify_ShopListingAutoComplete" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ShopListingPageTest" />
+        <item itemvalue="TestNG.ShopListingPageTest.verify_ShopListingAutoComplete" />
         <item itemvalue="TestNG.HomePageTest" />
         <item itemvalue="TestNG.HomePageTest.verify_HomePage_Menu_whenOpeningHours" />
         <item itemvalue="TestNG.OpeningHoursTest" />
-        <item itemvalue="TestNG.ContactUsTest" />
-        <item itemvalue="TestNG.C:/Users/Vladimir/IdeaProjects/LivatAutoTests/src/test/resources/ContactUsPageTestSuite.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674836775149</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Finished HomePageTest, minor fixes (url var) in OpeningHoursPage">
+      <created>1675355539636</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675355539636</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,7 +287,8 @@
     <MESSAGE value="Fix for BasePage.assertPageLoaded, HomePageTest finishing" />
     <MESSAGE value="Fix for HomePageTest, LivatMenuButton().click not working properly" />
     <MESSAGE value="Fix for double commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix for double commit" />
+    <MESSAGE value="Finished HomePageTest, minor fixes (url var) in OpeningHoursPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished HomePageTest, minor fixes (url var) in OpeningHoursPage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -371,31 +386,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java</url>
           <line>37</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/cases/HomePageTest.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/cases/HomePageTest.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/cases/HomePageTest.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/cases/HomePageTest.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/cases/HomePageTest.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
