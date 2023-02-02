@@ -17,10 +17,10 @@ public class HomePage extends BasePage {
     public static final String HomePageTitle = "Livat Hammersmith | Livat - Make Today Different";
 
     public WebElement LivatLogo() {return driver.findElement(By.xpath("//*[@class='w-36']"));}
-    public WebElement LivatMenuButton() {return driver.findElement(By.xpath("//*[@id='gatsby-focus-wrapper']/nav/button/span[1]"));}
-    public WebElement LivatMenuFormInnerLink(){ return driver.findElement(By.xpath("//*[@id='submenugroup-2']/li[1]/a"));}
-    public WebElement LivatMenuCloseButton(){ return driver.findElement(By.xpath("//*[@id='main-menu']/button/span"));}
-    public WebElement LivatMenuOpeningHoursButton(){ return driver.findElement(By.xpath("//*[@id='main-menu']/div/div[4]/a[2]/div"));}
+    public WebElement LivatMenuButton() {return driver.findElement(By.xpath("//div[@id='gatsby-focus-wrapper']/nav/button"));}
+    public WebElement LivatMenuFormInnerLink(){ return driver.findElement(By.xpath("//div[contains(@class, 'fold-out-menu-module--cardHolder')]/a[@href='/hammersmith/en/opening-hours']"));}
+    public WebElement LivatMenuCloseButton(){ return driver.findElement(By.xpath("//*[@id='main-menu']/button"));}
+    public WebElement LivatMenuOpeningHoursButton(){ return driver.findElement(By.xpath("//div[contains(@class, 'fold-out-menu-module--cardHolder')]/a[@href='/hammersmith/en/opening-hours']"));}
 
 
 

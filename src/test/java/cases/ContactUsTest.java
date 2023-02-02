@@ -83,7 +83,7 @@ public class ContactUsTest extends BaseTest {
 
         ContactUsPage.verifyInputMaxLength(ContactUsPage.ConfirmEmailInput(), 255);
     }
-    //Confirm Email - 255 expected
+    //Confirm Email - 254 expected
 
     @Test
     public void verify_PhoneNumberInputMaxLength(){
@@ -118,10 +118,10 @@ public class ContactUsTest extends BaseTest {
         basePage.open(ContactUsUrl);
         basePage.assertPageLoaded(ContactUsUrl);
 
-        ContactUsPage.NameInput().sendKeys("Template");
-        ContactUsPage.EmailInput().sendKeys("template@gmail.com");
-        ContactUsPage.ConfirmEmailInput().sendKeys("template@gmail.com");
-        ContactUsPage.MessageInput().sendKeys("TemplateMessage");
+        ContactUsPage.NameInput().sendKeys("HelloThere");
+        ContactUsPage.EmailInput().sendKeys("hello@gmail.com");
+        ContactUsPage.ConfirmEmailInput().sendKeys("hello@gmail.com");
+        ContactUsPage.MessageInput().sendKeys("Hello!");
         ContactUsPage.verifyTermsOfUseIsDisplayed();
         ContactUsPage.verifySubmitButtonInactive();
         ContactUsPage.TermsOfUseCheckBox().click();

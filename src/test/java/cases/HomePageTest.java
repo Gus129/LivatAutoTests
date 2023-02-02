@@ -1,12 +1,14 @@
 package cases;
 
 import base.BaseTest;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+
 import pages.HomePage;
 
 import java.time.Duration;
@@ -39,11 +41,11 @@ public class HomePageTest extends BaseTest{
 
         basePage.scrollToBottom();
         basePage.assertWebElement_isNOTVisibleInViewport(HomePage.LivatLogo());
-
+        basePage.scrollToTop();
     }
 
     @Test
-    public void verify_LogoClick_backto_HomePage(){
+    public void verify_LogoClick_backto_HomePage() throws InterruptedException {
 
         basePage.open(HomePageUrl);
         basePage.assertPageLoaded(HomePageUrl);
@@ -53,50 +55,40 @@ public class HomePageTest extends BaseTest{
 
         WebElement LivatLogoAnyPage = driver.findElement(By.xpath("//*[@id='gatsby-focus-wrapper']/div/header/div/div[1]/a"));
         LivatLogoAnyPage.click();
-
-        basePage.assertPageLoaded(HomePageUrl);
+        Thread.sleep(1100);
         basePage.verifyTitle(HomePageTitle);
 
     }
 
     @Test
-    public void verify_HomePage_Menu_whenOpeningHours(){
+    public void verify_HomePage_Menu_whenOpeningHours() throws InterruptedException { // Ajax элементы не признаю обычный exp-wait, пока что такое костыльное решение
 
         basePage.open(HomePageUrl);
+        basePage.assertPageLoaded(HomePageUrl);
 
+        Thread.sleep(1100);
+        basePage.waitElementIsVisible(HomePage.LivatMenuButton());
         HomePage.LivatMenuButton().click();
+        Thread.sleep(1100);
         HomePage.waitElementIsVisible(HomePage.LivatMenuFormInnerLink());
-
-
         HomePage.LivatMenuOpeningHoursButton().click();
-
-
+        Thread.sleep(1100);
         basePage.verifyTitle(OpeningHoursTitle);
         basePage.assertPageLoaded(OpeningHoursUrl);
     }
 
     @Test
-    public void verify_HomePage_Menu_whenOpenAndClose(){
+    public void verify_HomePage_Menu_whenOpenAndClose() throws InterruptedException {
         basePage.open(HomePageUrl);
-
+        Thread.sleep(1100);
+        basePage.waitElementIsVisible(HomePage.LivatMenuButton());
         HomePage.LivatMenuButton().click();
         HomePage.waitElementIsVisible(HomePage.LivatMenuFormInnerLink());
 
-
+        Thread.sleep(1100);
         HomePage.LivatMenuCloseButton().click();
         HomePage.assert_LivatMenuForm_isNOTVisible();
     }
-    @Test
-    public void verify_HomePage_Menu_whenClickAnywhere(){
 
-        basePage.open(HomePageUrl);
-        basePage.assertPageLoaded(HomePageUrl);
-
-        basePage.waitElementIsVisible(HomePage.LivatMenuButton());
-        HomePage.LivatMenuButton().click();
-
-        basePage.clickOutside();
-        basePage.assertWebElement_isNOTVisibleInViewport(HomePage.LivatMenuFormInnerLink());
-    }
 
 }

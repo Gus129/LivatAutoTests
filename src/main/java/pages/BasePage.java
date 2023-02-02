@@ -4,6 +4,7 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -29,7 +30,8 @@ public class BasePage {
 
     public WebElement waitElementIsVisible(WebElement element){
 
-        new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT)).until(ExpectedConditions.visibilityOf(element));
+        Wait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+        wait.until(ExpectedConditions.visibilityOf(element)); // TODO presentsofelement and visibility - по локатору
         return element;
 
     }
@@ -54,7 +56,7 @@ public class BasePage {
 
     // public void verifyField_isMandatory (WebElement fieldName){ - пока не нужно, но если делать то отдельно для каждого филда
 
-    public void assertPageLoaded(String url){
+    public void assertPageLoaded(String url){ //TODO поменять на чтото получше
 
         // Javascript executor to return value
         JavascriptExecutor j = (JavascriptExecutor) driver;
@@ -71,6 +73,8 @@ public class BasePage {
             fail("Page did not load");
         }
     }
+
+
 
     public void scrollToBottom (){
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");

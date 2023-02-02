@@ -94,7 +94,7 @@ public class OpeningHoursPage extends BasePage{
     public void verifyIKEAinfo_IsDisplayed(){
         WebElement QuickSearchResultHeading = driver.findElement(By.xpath("//*[@id='gatsby-focus-wrapper']/div/main/div/div[2]/div[2]/div/div[2]"));
         Assert.assertEquals(QuickSearchResultHeading.getAttribute("textContent"), "IKEA", "Fail: wrong header in results of quick search");
-        Assert.assertEquals(QuickSearchResultLink().getAttribute("href"), "https://www.livat.com/hammersmith/en/shops/ikea", "Fail: wrong link in results of quick search ");
+        Assert.assertEquals(QuickSearchResultLink().getAttribute("href"), IKEAshopUrl, "Fail: wrong link in results of quick search ");
 
     }
 
