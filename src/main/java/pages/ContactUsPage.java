@@ -5,16 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import java.util.List;
 
 import static org.testng.AssertJUnit.fail;
 
 
 public class ContactUsPage extends BasePage{
-
-
-
 
     public ContactUsPage(WebDriver driver) {
         super(driver);
@@ -46,6 +42,7 @@ public class ContactUsPage extends BasePage{
         return driver.findElement(By.xpath("//*[@id='phoneNumber']"));
     }
 
+
     public void verifySubmitButtonInactive(){
         Assert.assertFalse(SubmitButton().isEnabled(), "Button 'Submit' expected to be inactive");
     }
@@ -54,7 +51,6 @@ public class ContactUsPage extends BasePage{
     public void verifySubmitButtonActive(){
         Assert.assertTrue(SubmitButton().isEnabled(), "Button 'Submit' expected to be active");
     }
-
 
 
     public void verifyTermsOfUseIsDisplayed(){
@@ -86,8 +82,6 @@ public class ContactUsPage extends BasePage{
         else {
             fail("Fail -  for field '"+inputElement.getAccessibleName() +"' "+maxLengthInput+ " maxlength expected, actual - "+maxLengthDefined+"");
         }
-
-
 
     }
 

@@ -1,10 +1,8 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 public class HomePage extends BasePage {
@@ -23,11 +21,11 @@ public class HomePage extends BasePage {
     public WebElement LivatMenuOpeningHoursButton(){ return driver.findElement(By.xpath("//div[contains(@class, 'fold-out-menu-module--cardHolder')]/a[@href='/hammersmith/en/opening-hours']"));}
 
 
-
     public void assert_LivatMenuForm_isVisible(){
         Assert.assertTrue(LivatMenuFormInnerLink().isDisplayed(), "Fail: 'LivatMenuForm' is NOT visible");
 
     }
+
 
     public void assert_LivatMenuForm_isNOTVisible(){
         Assert.assertFalse(LivatMenuFormInnerLink().isDisplayed(), "Fail: 'LivatMenuForm' IS visible");

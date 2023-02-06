@@ -2,14 +2,11 @@ package pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-import static org.testng.AssertJUnit.fail;
 
 public class OpeningHoursPage extends BasePage{
 
