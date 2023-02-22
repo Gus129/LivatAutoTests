@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a665ea78-23c1-4c4e-bf09-3111e1832d6b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ContactUsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cases/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cases/HomePageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cases/MainBannerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +63,24 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.HomePageTest">
+  <component name="RunManager" selected="TestNG.ShopListingPageTest">
+    <configuration name="ContactUsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="LivatAutoTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cases" />
+      <option name="MAIN_CLASS_NAME" value="cases.ContactUsTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HomePageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="LivatAutoTests" />
       <extension name="coverage">
@@ -80,24 +92,6 @@
       <option name="PACKAGE_NAME" value="cases" />
       <option name="MAIN_CLASS_NAME" value="cases.HomePageTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomePageTest.verify_HomePage_Menu_whenOpeningHours" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="LivatAutoTests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cases" />
-      <option name="MAIN_CLASS_NAME" value="cases.HomePageTest" />
-      <option name="METHOD_NAME" value="verify_HomePage_Menu_whenOpeningHours" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -158,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.HomePageTest" />
-        <item itemvalue="TestNG.OpeningHoursTest" />
         <item itemvalue="TestNG.ShopListingPageTest" />
+        <item itemvalue="TestNG.OpeningHoursTest" />
+        <item itemvalue="TestNG.HomePageTest" />
+        <item itemvalue="TestNG.ContactUsTest" />
         <item itemvalue="TestNG.ShopListingPageTest.verify_ShopListingAutoComplete" />
-        <item itemvalue="TestNG.HomePageTest.verify_HomePage_Menu_whenOpeningHours" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675360160037</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Code formatting">
+      <created>1675692759541</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675692759541</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,6 +299,7 @@
     <MESSAGE value="Fix for double commit" />
     <MESSAGE value="Finished HomePageTest, minor fixes (url var) in OpeningHoursPage" />
     <MESSAGE value="3 ShopListingPage tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 ShopListingPage tests" />
+    <MESSAGE value="Code formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code formatting" />
   </component>
 </project>

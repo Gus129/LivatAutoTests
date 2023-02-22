@@ -96,7 +96,7 @@ public class OpeningHoursPage extends BasePage{
     }
 
     public void verifyIKEAPage_IsDisplayed(){
-        String text = "IKEA Hammersmith offers a wide range of simple, well-designed and affordable home furnishings";
+        String text = "IKEA offers a wide range of simple, well-designed and affordable home furnishings";
         List<WebElement> list = driver.findElements(By.xpath("//*[contains(text(),'" + text + "')]"));
         Assert.assertTrue(list.size() > 0, "Text '" + text + "' not found!");
 
