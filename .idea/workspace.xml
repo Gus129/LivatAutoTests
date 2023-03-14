@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a665ea78-23c1-4c4e-bf09-3111e1832d6b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/OpeningHoursPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/CommonAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/CommonAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ShopListingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ShopListingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +57,7 @@
       <recent name="C:\Users\Vladimir\IdeaProjects\LivatAutoTests\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vladimir\IdeaProjects\LivatAutoTests\src\main\resources" />
       <recent name="C:\Users\Vladimir\IdeaProjects\LivatAutoTests\src\test\resources" />
       <recent name="C:\Users\Vladimir\IdeaProjects\LivatAutoTests" />
     </key>
@@ -153,9 +155,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.ShopListingPageTest" />
-        <item itemvalue="TestNG.OpeningHoursTest" />
         <item itemvalue="TestNG.HomePageTest" />
         <item itemvalue="TestNG.ContactUsTest" />
+        <item itemvalue="TestNG.OpeningHoursTest" />
         <item itemvalue="TestNG.ShopListingPageTest.verify_ShopListingAutoComplete" />
       </list>
     </recent_temporary>
@@ -260,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675692759541</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="IKEA Text check fix, chromedriver update">
+      <created>1677064604912</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1677064604913</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,6 +309,7 @@
     <MESSAGE value="Finished HomePageTest, minor fixes (url var) in OpeningHoursPage" />
     <MESSAGE value="3 ShopListingPage tests" />
     <MESSAGE value="Code formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code formatting" />
+    <MESSAGE value="IKEA Text check fix, chromedriver update" />
+    <option name="LAST_COMMIT_MESSAGE" value="IKEA Text check fix, chromedriver update" />
   </component>
 </project>

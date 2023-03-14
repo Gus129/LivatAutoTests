@@ -20,7 +20,7 @@ public class ShopListingPage extends BasePage{
 
     public WebElement ShopListingInput(){return driver.findElement(By.xpath("//*[@placeholder='Find shops']"));}
     public WebElement ShopListAutoOptions(){ return driver.findElement(By.xpath("//*[@id='gatsby-focus-wrapper']/div/main/div[2]"));}
-    public WebElement ShopListDropdown(){ return driver.findElement(By.xpath("//*[@id='gatsby-focus-wrapper']/div/main/div[1]/div[1]/div[2]"));}
+    public WebElement ShopListDropdown(){ return driver.findElement(By.xpath("//*[@id='gatsby-focus-wrapper']/div/main/div[1]/div[1]/div[2]/div[1]/div[2]"));}
     public WebElement ShopListDropdown_Accessories(){return driver.findElement(By.xpath("//*[@id='1740ae7e-59df-5d27-b8f5-7070132f4e8c']"));}
 
 
